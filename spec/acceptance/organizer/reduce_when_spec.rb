@@ -18,7 +18,7 @@ RSpec.describe LightService::Organizer do
             :two   => [TestDoubles::AddsTwoAction],
             :three => [TestDoubles::AddsThreeAction]
           },
-          els: [TestDoubles::FailureAction]
+          :els => [TestDoubles::FailureAction]
         )
       ]
     end
