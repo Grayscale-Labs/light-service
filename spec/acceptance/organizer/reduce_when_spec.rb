@@ -14,11 +14,11 @@ RSpec.describe LightService::Organizer do
         reduce_when(
           :incr_num,
           {
-            :one   => [ AddsOneAction ],
-            :two   => [ AddsTwoAction ],
-            :three => [ AddsThreeAction ]
+            :one   => [ TestDoubles::AddsOneAction ],
+            :two   => [ TestDoubles::AddsTwoAction ],
+            :three => [ TestDoubles::AddsThreeAction ]
           },
-          els: [ RaiseErrorAction ]
+          els: [ TestDoubles::FailureAction ]
         )
       ]
     end
